@@ -3,9 +3,13 @@
 
 <!-- 设置为IUserDao接口方法提供sql语句配置 -->
 <mapper namespace="com.xzy.dao.IUserDao">
-
+    <select id="getall" resultType="User">
+        select * from user
+    </select>
     <select id="selectUser" resultType="User" parameterType="long">
         SELECT * FROM user WHERE id = #{id}
     </select>
-
+    <select id="get" parameterType="User" resultType="User">
+		select * from student where id=#{user_ID}
+	</select>
 </mapper>

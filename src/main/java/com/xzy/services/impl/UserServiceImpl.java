@@ -9,6 +9,8 @@ import com.xzy.services.IUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.List;
 
 @Service("userService")
 public class UserServiceImpl implements IUserService {
@@ -19,4 +21,29 @@ public class UserServiceImpl implements IUserService {
     public User selectUser(long userId) {
         return userDao.selectUser(userId);
     }
+
+    @Override
+    public User get(long user_ID) {
+        User user = new User();
+        user.setUser_ID(user_ID);
+        List<User> users = userDao.getall();
+        for (User u:users) {
+            System.out.println("id"+u.getUser_ID()+"name"+u.getUser_name()+"pwd"+u.getUser_pwd());
+            System.out.print(u.toString());
+        }
+
+        return userDao.get(user);
+    }
+
+    @Override
+    public List<User> showall() {
+        List<User> users = userDao.getall();
+        for (User u:users) {
+            System.out.println("id"+u.getUser_ID()+"name"+u.getUser_name()+"pwd"+u.getUser_pwd());
+            System.out.print(u.toString());
+        }
+        return users;
+    }
+
+
 }
