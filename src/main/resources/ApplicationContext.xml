@@ -26,7 +26,14 @@
         <!-- 扫描model包 -->
         <property name="typeAliasesPackage" value="com.xzy.model"/>
         <!-- 扫描sql配置文件:mapper需要的xml文件-->
-        <property name="mapperLocations" value="classpath:mapper/UserDao.xml"/>
+<!--        <property name="mapperLocations" value="classpath:mapper/NoticeDao.xml"/>-->
+        <property name="mapperLocations">
+                        <list>
+                           <!-- 表示在com/smart/包或以下所有目录中，以_sql.xml结尾所有文件 -->
+                            <value>classpath*:mapper/*.xml</value>
+                       </list>
+                     </property>
+
     </bean>
 
     <!-- Mapper动态代理开发，扫描dao接口包-->

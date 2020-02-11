@@ -1,7 +1,7 @@
 package com.xzy.controller;
 
 import com.xzy.model.User;
-import com.xzy.services.IUserService;
+import com.xzy.services.impl.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
