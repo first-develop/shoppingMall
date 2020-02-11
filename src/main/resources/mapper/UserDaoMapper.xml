@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+
+<!-- 由mapper标签开始 /mapper结束
+属性namespace：空间名，主要在代理中使用。这个namespace是唯一的。
+这里把mapper标签和接口联系在一起了，namespace=写接口路径，映射文件要和接口在同一目录下
+-->
+<mapper namespace="com.xzy.dao.IUserDao">
+    <!-- =============映射关系标签=============
+	属性type:写po类的包名类名，由于之前定义了po类的别名，这里就写这个别名
+	属性id：是这个映射标签的唯一标识
+	id标签是查询结果集中的唯一标识
+	属性column：查询出来的列名
+	属性property：是po类里所指定的列名
+	通常会在原列名后面加下划线，这是固定的，这里就是id后面_
+	-->
+    <resultMap type="com.xzy.model.User" id="userMap">
+    <result column="user_ID" property="userId" />
+    <result column="user_name" property="userName" />
+    <result column="user_pwd" property="userPwd" />
+    <result column="email" property="email" />
+    <result column="phone" property="phone" />
+    <result column="DATE" property="date" />
+    <result column="user_pic" property="userPic" />
+    <result column="user_real_name" property="userRealName" />
+    <result column="user_birth" property="userBirth" />
+    <result column="user_sex" property="userSex" />
+    </resultMap>
+
+    <!-- sql代码片段标签。属性id是该片段的唯一标识-->
+    <sql id="zd">
+        user_ID,user_name,user_pwd,email,phone,DATE,user_pic,user_real_name,user_birth,user_sex
+    </sql>
+
+    <!-- 增删改查标签里的id:一定要和接口里对应的方法名一致，
+		 resultMap输出类型里写映射标签里的id
+		 parameterType：输入类型，规范输入数据类型，指明查询时使用的参数类型-->
+    <!--根据id查询信息-->
+    <select id="selectUser" resultType="User" parameterType="long">
+        SELECT * FROM uesr WHERE user_ID = #{id}
+    </select>
+    <!--查询所有的用户信息-->
+    <select id="selectUsers" resultMap="userMap" parameterType="com.xzy.model.User">
+        select  <include refid="zd"></include> from uesr
+    </select>
+    <!--修改用户信息-->
+    <update id="update" parameterType="com.xzy.model.User">
+        update uesr set user_name=#{userName},user_pwd=#{userPwd},email=#{email},phone=#{phone},
+        DATE=#{date},user_pic=#{userPic},user_real_name=#{userRealName},user_birth=#{userBirth},user_sex=#{userSex}
+        where user_ID=#{userId}
+    </update>
+    <!--添加用户信息-->
+    <insert id="insert" parameterType="com.xzy.model.User">
+        insert into uesr(<include refid="zd"></include>) values(#{userId},#{userName},#{userPwd},#{email},#{phone},
+        #{date},#{userPic},#{userRealName},#{userBirth},#{userSex})
+    </insert>
+    <!--删除用户信息-->
+    <delete id="delete" parameterType="int">
+        delete from uesr where user_ID=#{userId}
+    </delete>
+
+</mapper>
