@@ -2,6 +2,7 @@ package com.xzy.dao;
 
 import com.xzy.model.Evaluate;
 import com.xzy.model.OrderUser;
+import com.xzy.model.User;
 
 import java.util.Map;
 
@@ -16,4 +17,6 @@ public interface EvaluateMapper {
     OrderUser getUGid(int oid);
     //插入评论
     void inEvaluate(Map map);
+    //用户头像
+    User getUPic(int uid);
 }

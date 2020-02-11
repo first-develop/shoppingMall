@@ -1,6 +1,7 @@
 package com.xzy.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Evaluate implements Serializable {
     private Integer comId;
@@ -12,6 +13,8 @@ public class Evaluate implements Serializable {
     private String dialogbox;
 
     private Integer comNum;
+
+    private Date date;
 
     private static final long serialVersionUID = 1L;
 
@@ -53,5 +56,13 @@ public class Evaluate implements Serializable {
 
     public void setComNum(Integer comNum) {
         this.comNum = comNum;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

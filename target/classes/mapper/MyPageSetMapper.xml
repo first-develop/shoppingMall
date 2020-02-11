@@ -22,15 +22,17 @@
     <!--修改用户信息-->
     <update id="SetUser" parameterType="map">
         update uesr
+        <set>
         <if test="userName != null and userName !='' ">
-            user_name = #{userName}
+            user_name=#{userName},
         </if>
         <if test="email != null and email !='' ">
-            email = #{email}
+            email=#{email},
         </if>
         <if test="userPic!=null and userPic !='' ">
-            user_pic = #{userPic}
+            user_pic=#{userPic},
         </if>
+        </set>
         where user_ID = #{userId}
     </update>
 

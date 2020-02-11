@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
+@RequestMapping("/user")
 public class SetPageController {
     @Autowired
     private MyPageSetService ms;
@@ -26,12 +27,17 @@ public class SetPageController {
     @RequestMapping("/getUser")
     public String getUser(HttpServletRequest httpServletRequest) throws Exception {
         User user = (User) httpServletRequest.getSession().getAttribute("user");
-        return JSONObject.toJSONString(user);
+        String userName = user.getUserName();
+        String userEmail = user.getEmail();
+        String userPic = user.getUserPic();
+
+        String[] userMessage= new String[]{userName,userEmail,userPic};
+        return JSONObject.toJSONString(userMessage);
     }
 
     //修改用户信息
     @RequestMapping("/setUser")
-    public void setUser(String userName, String email, MultipartFile userPic, HttpServletRequest hq, HttpServletResponse hp) throws Exception {
+    public void setUser(String userName, String email, CommonsMultipartFile userPic, HttpServletRequest hq, HttpServletResponse hp) throws Exception {
 
         User user = (User) hq.getSession().getAttribute("user");
         int userId = user.getUserId();
