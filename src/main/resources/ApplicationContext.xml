@@ -26,7 +26,10 @@
         <!-- 扫描model包 -->
         <property name="typeAliasesPackage" value="com.xzy.model"/>
         <!-- 扫描sql配置文件:mapper需要的xml文件-->
-        <property name="mapperLocations" value="classpath:mapper/UserDao.xml"/>
+        <property name="mapperLocations" value="classpath:mapper/FindMapper.xml"/>
+        <!--加载mybatis中的配置文件-->
+        <property name="configLocation" value="classpath:mybatis.xml"></property>
+
     </bean>
 
     <!-- Mapper动态代理开发，扫描dao接口包-->

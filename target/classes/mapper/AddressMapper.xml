@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xzy.dao.AddressMapper">
+  <resultMap id="BaseResultMap" type="com.xzy.model.Address">
+    <id column="address_id" jdbcType="INTEGER" property="addressId" />
+    <result column="user_ID" jdbcType="INTEGER" property="userId" />
+    <result column="userhome" jdbcType="VARCHAR" property="userhome" />
+    <result column="rec_name" jdbcType="VARCHAR" property="recName" />
+    <result column="post_ID" jdbcType="INTEGER" property="postId" />
+    <result column="rec_phone" jdbcType="VARCHAR" property="recPhone" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    address_id, user_ID, userhome, rec_name, post_ID, rec_phone
+  </sql>
+  <select id="selectByExample" parameterType="com.xzy.model.AddressExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from address
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from address
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from address
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.xzy.model.AddressExample">
+    delete from address
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.xzy.model.Address">
+    insert into address (address_id, user_ID, userhome, 
+      rec_name, post_ID, rec_phone
+      )
+    values (#{addressId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{userhome,jdbcType=VARCHAR}, 
+      #{recName,jdbcType=VARCHAR}, #{postId,jdbcType=INTEGER}, #{recPhone,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xzy.model.Address">
+    insert into address
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="addressId != null">
+        address_id,
+      </if>
+      <if test="userId != null">
+        user_ID,
+      </if>
+      <if test="userhome != null">
+        userhome,
+      </if>
+      <if test="recName != null">
+        rec_name,
+      </if>
+      <if test="postId != null">
+        post_ID,
+      </if>
+      <if test="recPhone != null">
+        rec_phone,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="addressId != null">
+        #{addressId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userhome != null">
+        #{userhome,jdbcType=VARCHAR},
+      </if>
+      <if test="recName != null">
+        #{recName,jdbcType=VARCHAR},
+      </if>
+      <if test="postId != null">
+        #{postId,jdbcType=INTEGER},
+      </if>
+      <if test="recPhone != null">
+        #{recPhone,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.xzy.model.AddressExample" resultType="java.lang.Long">
+    select count(*) from address
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update address
+    <set>
+      <if test="record.addressId != null">
+        address_id = #{record.addressId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userId != null">
+        user_ID = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userhome != null">
+        userhome = #{record.userhome,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recName != null">
+        rec_name = #{record.recName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.postId != null">
+        post_ID = #{record.postId,jdbcType=INTEGER},
+      </if>
+      <if test="record.recPhone != null">
+        rec_phone = #{record.recPhone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update address
+    set address_id = #{record.addressId,jdbcType=INTEGER},
+      user_ID = #{record.userId,jdbcType=INTEGER},
+      userhome = #{record.userhome,jdbcType=VARCHAR},
+      rec_name = #{record.recName,jdbcType=VARCHAR},
+      post_ID = #{record.postId,jdbcType=INTEGER},
+      rec_phone = #{record.recPhone,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xzy.model.Address">
+    update address
+    <set>
+      <if test="userId != null">
+        user_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userhome != null">
+        userhome = #{userhome,jdbcType=VARCHAR},
+      </if>
+      <if test="recName != null">
+        rec_name = #{recName,jdbcType=VARCHAR},
+      </if>
+      <if test="postId != null">
+        post_ID = #{postId,jdbcType=INTEGER},
+      </if>
+      <if test="recPhone != null">
+        rec_phone = #{recPhone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xzy.model.Address">
+    update address
+    set user_ID = #{userId,jdbcType=INTEGER},
+      userhome = #{userhome,jdbcType=VARCHAR},
+      rec_name = #{recName,jdbcType=VARCHAR},
+      post_ID = #{postId,jdbcType=INTEGER},
+      rec_phone = #{recPhone,jdbcType=VARCHAR}
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.xzy.model.Address">
+    <id column="address_id" jdbcType="INTEGER" property="addressId" />
+    <result column="user_ID" jdbcType="INTEGER" property="userId" />
+    <result column="userhome" jdbcType="VARCHAR" property="userhome" />
+    <result column="rec_name" jdbcType="VARCHAR" property="recName" />
+    <result column="post_ID" jdbcType="INTEGER" property="postId" />
+    <result column="rec_phone" jdbcType="VARCHAR" property="recPhone" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    address_id, user_ID, userhome, rec_name, post_ID, rec_phone
+  </sql>
+  <select id="selectByExample" parameterType="com.xzy.model.AddressExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from address
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from address
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from address
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.xzy.model.AddressExample">
+    delete from address
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.xzy.model.Address">
+    insert into address (address_id, user_ID, userhome, 
+      rec_name, post_ID, rec_phone
+      )
+    values (#{addressId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{userhome,jdbcType=VARCHAR}, 
+      #{recName,jdbcType=VARCHAR}, #{postId,jdbcType=INTEGER}, #{recPhone,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xzy.model.Address">
+    insert into address
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="addressId != null">
+        address_id,
+      </if>
+      <if test="userId != null">
+        user_ID,
+      </if>
+      <if test="userhome != null">
+        userhome,
+      </if>
+      <if test="recName != null">
+        rec_name,
+      </if>
+      <if test="postId != null">
+        post_ID,
+      </if>
+      <if test="recPhone != null">
+        rec_phone,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="addressId != null">
+        #{addressId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userhome != null">
+        #{userhome,jdbcType=VARCHAR},
+      </if>
+      <if test="recName != null">
+        #{recName,jdbcType=VARCHAR},
+      </if>
+      <if test="postId != null">
+        #{postId,jdbcType=INTEGER},
+      </if>
+      <if test="recPhone != null">
+        #{recPhone,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.xzy.model.AddressExample" resultType="java.lang.Long">
+    select count(*) from address
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update address
+    <set>
+      <if test="record.addressId != null">
+        address_id = #{record.addressId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userId != null">
+        user_ID = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userhome != null">
+        userhome = #{record.userhome,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recName != null">
+        rec_name = #{record.recName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.postId != null">
+        post_ID = #{record.postId,jdbcType=INTEGER},
+      </if>
+      <if test="record.recPhone != null">
+        rec_phone = #{record.recPhone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update address
+    set address_id = #{record.addressId,jdbcType=INTEGER},
+      user_ID = #{record.userId,jdbcType=INTEGER},
+      userhome = #{record.userhome,jdbcType=VARCHAR},
+      rec_name = #{record.recName,jdbcType=VARCHAR},
+      post_ID = #{record.postId,jdbcType=INTEGER},
+      rec_phone = #{record.recPhone,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xzy.model.Address">
+    update address
+    <set>
+      <if test="userId != null">
+        user_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userhome != null">
+        userhome = #{userhome,jdbcType=VARCHAR},
+      </if>
+      <if test="recName != null">
+        rec_name = #{recName,jdbcType=VARCHAR},
+      </if>
+      <if test="postId != null">
+        post_ID = #{postId,jdbcType=INTEGER},
+      </if>
+      <if test="recPhone != null">
+        rec_phone = #{recPhone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xzy.model.Address">
+    update address
+    set user_ID = #{userId,jdbcType=INTEGER},
+      userhome = #{userhome,jdbcType=VARCHAR},
+      rec_name = #{recName,jdbcType=VARCHAR},
+      post_ID = #{postId,jdbcType=INTEGER},
+      rec_phone = #{recPhone,jdbcType=VARCHAR}
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.xzy.model.Address">
+    <id column="address_id" jdbcType="INTEGER" property="addressId" />
+    <result column="user_ID" jdbcType="INTEGER" property="userId" />
+    <result column="userhome" jdbcType="VARCHAR" property="userhome" />
+    <result column="rec_name" jdbcType="VARCHAR" property="recName" />
+    <result column="post_ID" jdbcType="INTEGER" property="postId" />
+    <result column="rec_phone" jdbcType="VARCHAR" property="recPhone" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    address_id, user_ID, userhome, rec_name, post_ID, rec_phone
+  </sql>
+  <select id="selectByExample" parameterType="com.xzy.model.AddressExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from address
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from address
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from address
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.xzy.model.AddressExample">
+    delete from address
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.xzy.model.Address">
+    insert into address (address_id, user_ID, userhome, 
+      rec_name, post_ID, rec_phone
+      )
+    values (#{addressId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{userhome,jdbcType=VARCHAR}, 
+      #{recName,jdbcType=VARCHAR}, #{postId,jdbcType=INTEGER}, #{recPhone,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xzy.model.Address">
+    insert into address
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="addressId != null">
+        address_id,
+      </if>
+      <if test="userId != null">
+        user_ID,
+      </if>
+      <if test="userhome != null">
+        userhome,
+      </if>
+      <if test="recName != null">
+        rec_name,
+      </if>
+      <if test="postId != null">
+        post_ID,
+      </if>
+      <if test="recPhone != null">
+        rec_phone,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="addressId != null">
+        #{addressId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userhome != null">
+        #{userhome,jdbcType=VARCHAR},
+      </if>
+      <if test="recName != null">
+        #{recName,jdbcType=VARCHAR},
+      </if>
+      <if test="postId != null">
+        #{postId,jdbcType=INTEGER},
+      </if>
+      <if test="recPhone != null">
+        #{recPhone,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.xzy.model.AddressExample" resultType="java.lang.Long">
+    select count(*) from address
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update address
+    <set>
+      <if test="record.addressId != null">
+        address_id = #{record.addressId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userId != null">
+        user_ID = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userhome != null">
+        userhome = #{record.userhome,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recName != null">
+        rec_name = #{record.recName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.postId != null">
+        post_ID = #{record.postId,jdbcType=INTEGER},
+      </if>
+      <if test="record.recPhone != null">
+        rec_phone = #{record.recPhone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update address
+    set address_id = #{record.addressId,jdbcType=INTEGER},
+      user_ID = #{record.userId,jdbcType=INTEGER},
+      userhome = #{record.userhome,jdbcType=VARCHAR},
+      rec_name = #{record.recName,jdbcType=VARCHAR},
+      post_ID = #{record.postId,jdbcType=INTEGER},
+      rec_phone = #{record.recPhone,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xzy.model.Address">
+    update address
+    <set>
+      <if test="userId != null">
+        user_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userhome != null">
+        userhome = #{userhome,jdbcType=VARCHAR},
+      </if>
+      <if test="recName != null">
+        rec_name = #{recName,jdbcType=VARCHAR},
+      </if>
+      <if test="postId != null">
+        post_ID = #{postId,jdbcType=INTEGER},
+      </if>
+      <if test="recPhone != null">
+        rec_phone = #{recPhone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xzy.model.Address">
+    update address
+    set user_ID = #{userId,jdbcType=INTEGER},
+      userhome = #{userhome,jdbcType=VARCHAR},
+      rec_name = #{recName,jdbcType=VARCHAR},
+      post_ID = #{postId,jdbcType=INTEGER},
+      rec_phone = #{recPhone,jdbcType=VARCHAR}
+    where address_id = #{addressId,jdbcType=INTEGER}
+  </update>
+</mapper>

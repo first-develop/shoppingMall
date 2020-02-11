@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xzy.dao.RecommendMapper">
+  <resultMap id="BaseResultMap" type="com.xzy.model.Recommend">
+    <id column="comm_ID" jdbcType="INTEGER" property="commId" />
+    <result column="user_ID" jdbcType="INTEGER" property="userId" />
+    <result column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="click" jdbcType="INTEGER" property="click" />
+    <result column="find" jdbcType="INTEGER" property="find" />
+    <result column="TIME" jdbcType="TIME" property="time" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    comm_ID, user_ID, goods_id, click, find, TIME
+  </sql>
+  <select id="selectByExample" parameterType="com.xzy.model.RecommendExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from recommend
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from recommend
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.xzy.model.RecommendExample">
+    delete from recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.xzy.model.Recommend">
+    insert into recommend (comm_ID, user_ID, goods_id, 
+      click, find, TIME)
+    values (#{commId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{goodsId,jdbcType=INTEGER}, 
+      #{click,jdbcType=INTEGER}, #{find,jdbcType=INTEGER}, #{time,jdbcType=TIME})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xzy.model.Recommend">
+    insert into recommend
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="commId != null">
+        comm_ID,
+      </if>
+      <if test="userId != null">
+        user_ID,
+      </if>
+      <if test="goodsId != null">
+        goods_id,
+      </if>
+      <if test="click != null">
+        click,
+      </if>
+      <if test="find != null">
+        find,
+      </if>
+      <if test="time != null">
+        TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="commId != null">
+        #{commId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsId != null">
+        #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="click != null">
+        #{click,jdbcType=INTEGER},
+      </if>
+      <if test="find != null">
+        #{find,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=TIME},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.xzy.model.RecommendExample" resultType="java.lang.Long">
+    select count(*) from recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update recommend
+    <set>
+      <if test="record.commId != null">
+        comm_ID = #{record.commId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userId != null">
+        user_ID = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.goodsId != null">
+        goods_id = #{record.goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="record.click != null">
+        click = #{record.click,jdbcType=INTEGER},
+      </if>
+      <if test="record.find != null">
+        find = #{record.find,jdbcType=INTEGER},
+      </if>
+      <if test="record.time != null">
+        TIME = #{record.time,jdbcType=TIME},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update recommend
+    set comm_ID = #{record.commId,jdbcType=INTEGER},
+      user_ID = #{record.userId,jdbcType=INTEGER},
+      goods_id = #{record.goodsId,jdbcType=INTEGER},
+      click = #{record.click,jdbcType=INTEGER},
+      find = #{record.find,jdbcType=INTEGER},
+      TIME = #{record.time,jdbcType=TIME}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xzy.model.Recommend">
+    update recommend
+    <set>
+      <if test="userId != null">
+        user_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsId != null">
+        goods_id = #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="click != null">
+        click = #{click,jdbcType=INTEGER},
+      </if>
+      <if test="find != null">
+        find = #{find,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        TIME = #{time,jdbcType=TIME},
+      </if>
+    </set>
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xzy.model.Recommend">
+    update recommend
+    set user_ID = #{userId,jdbcType=INTEGER},
+      goods_id = #{goodsId,jdbcType=INTEGER},
+      click = #{click,jdbcType=INTEGER},
+      find = #{find,jdbcType=INTEGER},
+      TIME = #{time,jdbcType=TIME}
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.xzy.model.Recommend">
+    <id column="comm_ID" jdbcType="INTEGER" property="commId" />
+    <result column="user_ID" jdbcType="INTEGER" property="userId" />
+    <result column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="click" jdbcType="INTEGER" property="click" />
+    <result column="find" jdbcType="INTEGER" property="find" />
+    <result column="TIME" jdbcType="TIME" property="time" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    comm_ID, user_ID, goods_id, click, find, TIME
+  </sql>
+  <select id="selectByExample" parameterType="com.xzy.model.RecommendExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from recommend
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from recommend
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.xzy.model.RecommendExample">
+    delete from recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.xzy.model.Recommend">
+    insert into recommend (comm_ID, user_ID, goods_id, 
+      click, find, TIME)
+    values (#{commId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{goodsId,jdbcType=INTEGER}, 
+      #{click,jdbcType=INTEGER}, #{find,jdbcType=INTEGER}, #{time,jdbcType=TIME})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xzy.model.Recommend">
+    insert into recommend
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="commId != null">
+        comm_ID,
+      </if>
+      <if test="userId != null">
+        user_ID,
+      </if>
+      <if test="goodsId != null">
+        goods_id,
+      </if>
+      <if test="click != null">
+        click,
+      </if>
+      <if test="find != null">
+        find,
+      </if>
+      <if test="time != null">
+        TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="commId != null">
+        #{commId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsId != null">
+        #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="click != null">
+        #{click,jdbcType=INTEGER},
+      </if>
+      <if test="find != null">
+        #{find,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=TIME},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.xzy.model.RecommendExample" resultType="java.lang.Long">
+    select count(*) from recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update recommend
+    <set>
+      <if test="record.commId != null">
+        comm_ID = #{record.commId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userId != null">
+        user_ID = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.goodsId != null">
+        goods_id = #{record.goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="record.click != null">
+        click = #{record.click,jdbcType=INTEGER},
+      </if>
+      <if test="record.find != null">
+        find = #{record.find,jdbcType=INTEGER},
+      </if>
+      <if test="record.time != null">
+        TIME = #{record.time,jdbcType=TIME},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update recommend
+    set comm_ID = #{record.commId,jdbcType=INTEGER},
+      user_ID = #{record.userId,jdbcType=INTEGER},
+      goods_id = #{record.goodsId,jdbcType=INTEGER},
+      click = #{record.click,jdbcType=INTEGER},
+      find = #{record.find,jdbcType=INTEGER},
+      TIME = #{record.time,jdbcType=TIME}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xzy.model.Recommend">
+    update recommend
+    <set>
+      <if test="userId != null">
+        user_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsId != null">
+        goods_id = #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="click != null">
+        click = #{click,jdbcType=INTEGER},
+      </if>
+      <if test="find != null">
+        find = #{find,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        TIME = #{time,jdbcType=TIME},
+      </if>
+    </set>
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xzy.model.Recommend">
+    update recommend
+    set user_ID = #{userId,jdbcType=INTEGER},
+      goods_id = #{goodsId,jdbcType=INTEGER},
+      click = #{click,jdbcType=INTEGER},
+      find = #{find,jdbcType=INTEGER},
+      TIME = #{time,jdbcType=TIME}
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.xzy.model.Recommend">
+    <id column="comm_ID" jdbcType="INTEGER" property="commId" />
+    <result column="user_ID" jdbcType="INTEGER" property="userId" />
+    <result column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="click" jdbcType="INTEGER" property="click" />
+    <result column="find" jdbcType="INTEGER" property="find" />
+    <result column="TIME" jdbcType="TIME" property="time" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    comm_ID, user_ID, goods_id, click, find, TIME
+  </sql>
+  <select id="selectByExample" parameterType="com.xzy.model.RecommendExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from recommend
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from recommend
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.xzy.model.RecommendExample">
+    delete from recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.xzy.model.Recommend">
+    insert into recommend (comm_ID, user_ID, goods_id, 
+      click, find, TIME)
+    values (#{commId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{goodsId,jdbcType=INTEGER}, 
+      #{click,jdbcType=INTEGER}, #{find,jdbcType=INTEGER}, #{time,jdbcType=TIME})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xzy.model.Recommend">
+    insert into recommend
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="commId != null">
+        comm_ID,
+      </if>
+      <if test="userId != null">
+        user_ID,
+      </if>
+      <if test="goodsId != null">
+        goods_id,
+      </if>
+      <if test="click != null">
+        click,
+      </if>
+      <if test="find != null">
+        find,
+      </if>
+      <if test="time != null">
+        TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="commId != null">
+        #{commId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsId != null">
+        #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="click != null">
+        #{click,jdbcType=INTEGER},
+      </if>
+      <if test="find != null">
+        #{find,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=TIME},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.xzy.model.RecommendExample" resultType="java.lang.Long">
+    select count(*) from recommend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update recommend
+    <set>
+      <if test="record.commId != null">
+        comm_ID = #{record.commId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userId != null">
+        user_ID = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.goodsId != null">
+        goods_id = #{record.goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="record.click != null">
+        click = #{record.click,jdbcType=INTEGER},
+      </if>
+      <if test="record.find != null">
+        find = #{record.find,jdbcType=INTEGER},
+      </if>
+      <if test="record.time != null">
+        TIME = #{record.time,jdbcType=TIME},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update recommend
+    set comm_ID = #{record.commId,jdbcType=INTEGER},
+      user_ID = #{record.userId,jdbcType=INTEGER},
+      goods_id = #{record.goodsId,jdbcType=INTEGER},
+      click = #{record.click,jdbcType=INTEGER},
+      find = #{record.find,jdbcType=INTEGER},
+      TIME = #{record.time,jdbcType=TIME}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xzy.model.Recommend">
+    update recommend
+    <set>
+      <if test="userId != null">
+        user_ID = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsId != null">
+        goods_id = #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="click != null">
+        click = #{click,jdbcType=INTEGER},
+      </if>
+      <if test="find != null">
+        find = #{find,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        TIME = #{time,jdbcType=TIME},
+      </if>
+    </set>
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xzy.model.Recommend">
+    update recommend
+    set user_ID = #{userId,jdbcType=INTEGER},
+      goods_id = #{goodsId,jdbcType=INTEGER},
+      click = #{click,jdbcType=INTEGER},
+      find = #{find,jdbcType=INTEGER},
+      TIME = #{time,jdbcType=TIME}
+    where comm_ID = #{commId,jdbcType=INTEGER}
+  </update>
+</mapper>

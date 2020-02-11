@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="shoppingMall:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d547abc4-aefb-491d-b548-523b30e61a57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/shoppingMall_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/shoppingMall_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_core_4_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_dysmsapi_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_35.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_generator_mybatis_generator_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_0_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/terminal.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/controller/FindController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/dao/FindMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/dao/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/Collect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/Evaluate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/GoodsDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/GoodsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/OrderUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/Orders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/Recommend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/SG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/Seller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/ShopCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/ShopUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/USCollect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/services/FindService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/services/impl/FindServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/services/impl/UserServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/utils/AliyunMessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/utils/MD5Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/vo/Findsellergoods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xzy/vo/Findsvo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/FindMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ForGetPwd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/PwdLogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/User.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/controller/FindController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/controller/test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/dao/FindMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/dao/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/Collect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/Evaluate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/GoodsDetails.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/GoodsTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/OrderUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/Orders.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/Recommend.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/SG.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/Seller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/ShopCar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/ShopUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/USCollect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/services/FindService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/services/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/services/impl/UserServiceImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/services/impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/utils/MD5Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/vo/Findsellergoods.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/xzy/vo/Findsvo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/AddressMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/BigpicMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/CollectMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/EvaluateMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/GoodsDetailsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/GoodsTableMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/OrderUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/OrdersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/RecommendMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/SGMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/SellerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ShopCarMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/ShopUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/USCollectMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mybatis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/User.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/ForGetPwd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/PwdLogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/Register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/User.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/META-INF/shoppingMall.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/controller/FindController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/controller/test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/dao/IUserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/dao/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/model/Collect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/model/GoodsTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/model/Orders.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/model/SG.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/model/Seller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/model/ShopCar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/model/USCollect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/services/FindService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/services/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/services/impl/UserServiceImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/utils/AliyunMessageUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/utils/MD5Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/vo/Findsellergoods.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/com/xzy/vo/Findsvo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/AddressMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/BigpicMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/CollectMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/EvaluateMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/GoodsDetailsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/GoodsTableMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/OrderUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/OrdersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/RecommendMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/SGMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/SellerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/ShopCarMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/ShopUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/USCollectMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/UserDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/classes/mybatis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/activation-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/aliyun-java-sdk-core-4.0.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/aliyun-java-sdk-dysmsapi-1.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/commons-pool2-2.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/fastjson-1.2.59.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/gson-2.8.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/httpclient-4.5.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/httpcore-4.4.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/jaxb-api-2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/jaxb-core-2.1.14.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/jaxb-impl-2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/jedis-2.9.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/lib/stax-api-1.0-2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/shoppingMall-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoppingMall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shoppingMall.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xzy/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xzy/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xzy/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xzy/dao/IUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xzy/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xzy/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xzy/services/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xzy/services/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xzy/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xzy/services/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ApplicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ApplicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/User.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/User.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ApplicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ApplicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xzy/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xzy/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xzy/dao/IUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xzy/dao/IUserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xzy/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xzy/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xzy/services/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xzy/services/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\bianchen\IntelliJ IDEA 2019.3.1\ideaprojects\shoppingMall\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/java/maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\java\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XG51OfEZH36jIv4Oys9NpkXxGu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/index.html" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15527344" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\bianchen\IntelliJ IDEA 2019.3.1\ideaprojects\shoppingMall\src\main\webapp\WEB-INF" />
+      <recent name="D:\bianchen\IntelliJ IDEA 2019.3.1\ideaprojects\shoppingMall\src\main\java\com\xzy\model" />
+      <recent name="D:\bianchen\IntelliJ IDEA 2019.3.1\ideaprojects\shoppingMall\src\main\resources" />
+      <recent name="D:\bianchen\IntelliJ IDEA 2019.3.1\ideaprojects\shoppingMall\src\main\java\com\xzy\controller" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.JOJO">
+    <configuration name="AliyunMessageUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xzy.utils.AliyunMessageUtils" />
+      <module name="shoppingMall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xzy.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MD5Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xzy.utils.MD5Utils" />
+      <module name="shoppingMall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xzy.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xzy.controller.test" />
+      <module name="shoppingMall" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xzy.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JOJO" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/shoppingMall_war_exploded/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="shoppingMall:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/shoppingMall_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_shoppingMall_3" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55292" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="shoppingMall:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.test" />
+      <item itemvalue="Application.AliyunMessageUtils" />
+      <item itemvalue="Application.MD5Utils" />
+      <item itemvalue="Tomcat Server.JOJO" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MD5Utils" />
+        <item itemvalue="Application.AliyunMessageUtils" />
+        <item itemvalue="Application.MD5Utils" />
+        <item itemvalue="Application.AliyunMessageUtils" />
+        <item itemvalue="Application.MD5Utils" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.18437324" />
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d547abc4-aefb-491d-b548-523b30e61a57" name="Default Changelist" comment="" />
+      <created>1580659374781</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580659374781</updated>
+      <workItem from="1580659381185" duration="1189000" />
+      <workItem from="1580695952421" duration="1325000" />
+      <workItem from="1580697732055" duration="472000" />
+      <workItem from="1580733821801" duration="2601000" />
+      <workItem from="1580736455067" duration="2338000" />
+      <workItem from="1580738821828" duration="2716000" />
+      <workItem from="1580788217939" duration="4961000" />
+      <workItem from="1580802257527" duration="13393000" />
+      <workItem from="1580831369491" duration="236000" />
+      <workItem from="1580886303080" duration="11381000" />
+      <workItem from="1580957946034" duration="15780000" />
+      <workItem from="1581041301868" duration="15319000" />
+      <workItem from="1581068952619" duration="14821000" />
+      <workItem from="1581127574363" duration="21339000" />
+      <workItem from="1581215239568" duration="27995000" />
+      <workItem from="1581303798191" duration="18889000" />
+      <workItem from="1581386783479" duration="4339000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="491" y="214" key="#Setter_Template" timestamp="1581337771949">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="491" y="214" key="#Setter_Template/0.0.1920.1040@0.0.1920.1040" timestamp="1581337771949" />
+    <state x="737" y="324" key="#Template_Data_Languages" timestamp="1581081733003">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="737" y="324" key="#Template_Data_Languages/0.0.1920.1040@0.0.1920.1040" timestamp="1581081733003" />
+    <state x="335" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581088048375">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="335" y="244" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581088048375" />
+    <state x="704" y="245" key="#com.intellij.ide.util.MemberChooser" timestamp="1581340420623">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="704" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581340420623" />
+    <state x="398" y="187" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1580737598425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="398" y="187" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1580737598425" />
+    <state x="268" y="421" width="431" height="227" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581228446760">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="268" y="421" width="431" height="227" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1581228446760" />
+    <state x="212" y="318" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581229662052">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="212" y="318" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581229662052" />
+    <state x="953" y="156" key="CommitChangelistDialog2" timestamp="1581388353090">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="953" y="156" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581388353090" />
+    <state x="687" y="357" key="EnvironmentVariablesDialog" timestamp="1581387932085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="687" y="357" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581387932085" />
+    <state x="586" y="284" key="FileChooserDialogImpl" timestamp="1581387999141">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="284" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581387999141" />
+    <state width="1705" height="219" key="GridCell.Tab.0.bottom" timestamp="1581347649473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649473" />
+    <state width="1705" height="219" key="GridCell.Tab.0.center" timestamp="1581347649473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649473" />
+    <state width="1705" height="219" key="GridCell.Tab.0.left" timestamp="1581347649473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649473" />
+    <state width="1705" height="219" key="GridCell.Tab.0.right" timestamp="1581347649473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649473" />
+    <state width="1705" height="219" key="GridCell.Tab.1.bottom" timestamp="1581347649473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649473" />
+    <state width="1705" height="219" key="GridCell.Tab.1.center" timestamp="1581347649473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649473" />
+    <state width="1705" height="219" key="GridCell.Tab.1.left" timestamp="1581347649473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649473" />
+    <state width="1705" height="219" key="GridCell.Tab.1.right" timestamp="1581347649473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649473" />
+    <state width="1705" height="219" key="GridCell.Tab.2.bottom" timestamp="1581347649474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649474" />
+    <state width="1705" height="219" key="GridCell.Tab.2.center" timestamp="1581347649474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649474" />
+    <state width="1705" height="219" key="GridCell.Tab.2.left" timestamp="1581347649473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649473" />
+    <state width="1705" height="219" key="GridCell.Tab.2.right" timestamp="1581347649474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1705" height="219" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581347649474" />
+    <state x="601" y="188" key="Maven.ArtifactSearchDialog" timestamp="1580907286151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="601" y="188" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580907286151" />
+    <state x="860" y="291" key="RollbackChangesDialog" timestamp="1580739442672">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="860" y="291" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580739442672" />
+    <state x="611" y="112" width="1239" height="845" key="SettingsEditor" timestamp="1581388451587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="611" y="112" width="1239" height="845" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581388451587" />
+    <state x="619" y="256" key="Vcs.Push.Dialog.v2" timestamp="1581391704377">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="619" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581391704377" />
+    <state x="267" y="119" width="1521" height="802" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1581391723702">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="267" y="119" width="1521" height="802" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581391723702" />
+    <state x="554" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1581386789671">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="554" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581386789671" />
+    <state x="715" y="322" key="git4idea.merge.GitPullDialog" timestamp="1581390419436">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="322" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581390419436" />
+    <state x="164" y="248" key="run.anything.popup" timestamp="1581221272218">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="164" y="248" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581221272218" />
+    <state x="568" y="327" width="672" height="678" key="search.everywhere.popup" timestamp="1581252123235">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="568" y="327" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581252123235" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xzy/services/impl/UserServiceImpl.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
