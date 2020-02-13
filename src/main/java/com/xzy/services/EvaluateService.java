@@ -1,13 +1,11 @@
 package com.xzy.services;
 
-import com.xzy.model.Evaluate;
-import com.xzy.model.OrderUser;
+import com.xzy.vo.Evaluatevo;
 
+import java.util.List;
 import java.util.Map;
 
 public interface EvaluateService {
-    //当前商品评价
-    Evaluate findPage(int gid);
 
     //查询总评价数
     long count(int gid);
@@ -16,8 +14,11 @@ public interface EvaluateService {
     int getOrderState(int oid);
 
     //查询商品id,用户id
-    OrderUser getUGid(int oid);
+    int getGid(int oid);
 
     //插入评论
-    void inEvaluate(Map map);
+    void setEvaluate(Map map) throws Exception;
+
+    //查询商品所有评论
+    public List<Evaluatevo> getalleva(int goodsId);
 }

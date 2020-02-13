@@ -15,9 +15,9 @@
     SELECT state,user_ID FROM orders WHERE order_ID=#{oid};
   </select>
 
-  <!--根据订单ID,得到商品id,用户id-->
-  <select id="getUGid" parameterType="int" resultType="com.xzy.model.OrderUser">
-    SELECT goods_id,user_ID FROM order_user WHERE order_ID=#{oid};
+  <!--根据订单ID,得到商品id-->
+  <select id="getGid" parameterType="int" resultType="java.lang.Integer">
+    SELECT goods_id FROM order_user WHERE order_ID=#{oid};
   </select>
 
   <!-- 根据用户ID，得到用户头像-->
@@ -26,21 +26,9 @@
   </select>
 
   <!--插入评论-->
-  <insert id="inEvaluate" parameterType="map" >
-    INSERT into evaluate(evaluate.dialogbox,evaluate.goods_id,evaluate.user_ID) VALUES
-    <if test="dialogbox != null and dialogbox !='' ">
-      dialogbox = #{dialogbox}
-    </if>
-    <if test="user_ID != null and user_ID !='' ">
-      user_ID = #{userId}
-    </if>
-    <if test="goods_id !=null and goods_id !='' ">
-      goods_id = #{gid}
-    </if>
-    <if test="date != null and date != ''">
-      date = #{date}
-    </if>
-
+  <insert id="setEvaluate" parameterType="map" >
+    insert into evaluate(evaluate.dialogbox,evaluate.user_ID,evaluate.goods_id,evaluate.date,evaluate.com_num)
+    values(#{dialogbox},#{userId},#{gid},#{date},#{num})
   </insert>
 
   <!--查询当前商品的所有评论和对应用户-->
@@ -52,5 +40,10 @@
   <select id="count" resultType="long" parameterType="long">
 	select count(1) from evaluate where goods_id=#{gid}
 </select>
+
+  <!--查询用户头像名字-->
+  <select id="getuser" resultMap="Evaluate" parameterType="int">
+    select user_pic,user_name from uesr where user_ID=#{userId}
+  </select>
 
 </mapper>

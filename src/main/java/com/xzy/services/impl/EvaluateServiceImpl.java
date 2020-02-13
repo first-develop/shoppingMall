@@ -2,11 +2,14 @@ package com.xzy.services.impl;
 
 import com.xzy.dao.EvaluateMapper;
 import com.xzy.model.Evaluate;
-import com.xzy.model.OrderUser;
+import com.xzy.model.User;
 import com.xzy.services.EvaluateService;
+import com.xzy.vo.Evaluatevo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -15,8 +18,24 @@ public class EvaluateServiceImpl implements EvaluateService {
     private EvaluateMapper em;
 
     @Override
-    public Evaluate findPage(int gid) {
-        return em.findPage(gid);
+    public List<Evaluatevo> getalleva(int goodsId) {
+        List<Evaluatevo> evaluatevoList=new ArrayList<Evaluatevo>();
+
+        List<com.xzy.model.Evaluate> evaluateList=em.findPage(goodsId);
+        if(!evaluateList.isEmpty()){
+            for (Evaluate evaluate :evaluateList) {
+                Evaluatevo evaluatevo=new Evaluatevo();
+                //查询头像和名字
+                User user=em.getuser(evaluate.getUserId());
+                evaluatevo.setDialogbox(evaluate.getDialogbox());
+                evaluatevo.setDate(evaluate.getDate());
+                evaluatevo.setUserName(user.getUserName());
+                evaluatevo.setUserPic(user.getUserPic());
+                evaluatevoList.add(evaluatevo);
+            }
+        }
+
+        return evaluatevoList;
     }
 
     @Override
@@ -30,13 +49,13 @@ public class EvaluateServiceImpl implements EvaluateService {
     }
 
     @Override
-    public OrderUser getUGid(int oid) {
-        return em.getUGid(oid);
+    public int getGid(int oid) {
+        return em.getGid(oid);
     }
 
     @Override
-    public void inEvaluate(Map map) {
-        em.inEvaluate(map);
+    public void setEvaluate(Map map) throws Exception{
+        em.setEvaluate(map);
         System.out.println("评价成功");
     }
 }

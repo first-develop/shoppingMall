@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -37,7 +38,7 @@ public class SetPageController {
 
     //修改用户信息
     @RequestMapping("/setUser")
-    public void setUser(String userName, String email, CommonsMultipartFile userPic, HttpServletRequest hq, HttpServletResponse hp) throws Exception {
+    public void setUser(String userName, String userEmail, @RequestParam(value = "userPic",required = false) CommonsMultipartFile userPic, HttpServletRequest hq, HttpServletResponse hp) throws Exception {
 
         User user = (User) hq.getSession().getAttribute("user");
         int userId = user.getUserId();
@@ -49,7 +50,7 @@ public class SetPageController {
 
         Map map = new HashMap();
         map.put("userName",userName);
-        map.put("email",email);
+        map.put("email",userEmail);
         map.put("userPic",url);
         map.put("userId",userId);
 
