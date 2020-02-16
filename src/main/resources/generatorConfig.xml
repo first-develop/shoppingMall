@@ -55,7 +55,8 @@
         <table tableName="shop_user" domainObjectName="shop_user"></table>
         <table tableName="shopcar" domainObjectName="shopcar"></table>
         <table tableName="u_s_collect" domainObjectName="u_s_collect"></table>
-
+        <table tableName="goods_table" domainObjectName="goods_table"></table>
+        <table tableName="bigpic" domainObjectName="bigpic"></table>
 
 
 

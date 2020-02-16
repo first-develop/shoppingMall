@@ -35,10 +35,6 @@
     <a href="?start=${page.end}">末页</a>
 </div>
 
-<%--搜索--%>
-<form action="search" method="post">
-    搜索框：<input type="text" >
-    <input type="submit" value="搜索">
-</form>
+
 </body>
 </html>
