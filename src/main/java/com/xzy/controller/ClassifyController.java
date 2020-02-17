@@ -1,4 +1,8 @@
 package com.xzy.controller;
+/**
+ * Create by Intellij IDEA.
+ * User:朱星鑫
+ */
 
 import com.alibaba.fastjson.JSONObject;
 import com.xzy.model.GoodsTable;
@@ -13,6 +17,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
+@ResponseBody
 public class ClassifyController {
     @Resource
     private ClassifyService cf;
@@ -20,7 +25,6 @@ public class ClassifyController {
     //传入fid查询分类目录以及子目录
     //fid对应着数据库的first_id
     @RequestMapping(value = "/classify",produces = "text/html;charset=UTF-8")
-    @ResponseBody
     public String classify(long fid){
         List<GoodsTable> classifyname = null;
         classifyname = cf.classifyleft(fid);
@@ -29,7 +33,6 @@ public class ClassifyController {
 
     //推荐分类，根据评论数取前几
     @RequestMapping(value = "/classify/recommend",produces = "text/html;charset=UTF-8")
-    @ResponseBody
     public String RecommendClassify(){
         List<GoodsTable> recommendName = null;
 
@@ -39,7 +42,6 @@ public class ClassifyController {
     }
     //热门分类，根据点击数取前几
     @RequestMapping(value = "/classify/hot",produces = "text/html;charset=UTF-8")
-    @ResponseBody
     public String HotClassify(){
         List<GoodsTable> hotName = null;
         hotName = cf.hotclassify();//热门分类

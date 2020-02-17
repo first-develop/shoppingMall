@@ -12,7 +12,7 @@
 </head>
 <body>
     <div style="text-align: center;">
-        <form action="${pageContext.request.contextPath}/user/PwdLogin" method="get">
+        <form action="${pageContext.request.contextPath}/user/PwdLogin" method="post">
             <p>用户名<input type="text" name="user_name"/></p>
             <p>密码<input type="password" name="user_pwd"/></p>
             <input type="submit" value="登录">

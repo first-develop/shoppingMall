@@ -41,7 +41,7 @@ public class UserController {
 //
 //    @RequestMapping("/selectall")
 //    public ModelAndView userList(User usermodel){
-//        ModelAndView mv=new ModelAndView("forward:/User.jsp");
+//
 //        List<User> userList=userService.getselectUsers(usermodel);
 //
 //        mv.addObject("userlist",userList);
@@ -93,7 +93,7 @@ public class UserController {
     }
 
     //用户密码登录
-    @RequestMapping("/PwdLogin")
+    @RequestMapping(value = "/PwdLogin",method = RequestMethod.POST)
     @ResponseBody
     public ModelAndView PwdLogin(@RequestParam("user_name")String userName,@RequestParam("user_pwd")String userPwd){
         User user=new User();
@@ -109,7 +109,7 @@ public class UserController {
             System.out.println("登录成功");
             mv.addObject("user_name",user1.getUserName());
             mv.addObject("msg","YES");
-            mv.setViewName("index");
+            mv.setViewName("page/index");
             HttpSession session=request.getSession();
             session.setAttribute("user",user1);
         }else {
@@ -135,7 +135,7 @@ public class UserController {
             user=userService.codeloginCheck(phone);
             session.setAttribute("user",user);
             mv.addObject("msg","YES");
-            mv.setViewName("index");
+            mv.setViewName("page/index");
         }else{
             mv.addObject("msg","NO");
             mv.setViewName("login");
@@ -147,7 +147,7 @@ public class UserController {
     }
 
     //发送登录验证码
-    @RequestMapping(value="/sendloginMsg")
+    @RequestMapping(value="/sendloginMsg",method = RequestMethod.POST)
     public ModelAndView sendloginMsg(@RequestParam("phone") String phone){
         SendSmsResponse ssr=null;
         //发送登录验证码模块
@@ -166,7 +166,7 @@ public class UserController {
     }
 
     //发送注册验证码
-    @RequestMapping(value="/sendRegisterMsg")
+    @RequestMapping(value="/sendRegisterMsg",method = RequestMethod.POST)
     public ModelAndView sendMsg(@RequestParam("phone") String phone){
         SendSmsResponse ssr=null;
         //发送登录验证码模块
@@ -185,7 +185,7 @@ public class UserController {
     }
 
     //发送重置验证码
-    @RequestMapping(value="/sendpwdMsg")
+    @RequestMapping(value="/sendpwdMsg",method = RequestMethod.POST)
     public ModelAndView sendpwdMsg(@RequestParam("phone") String phone){
         SendSmsResponse ssr=null;
         //发送登录验证码模块
@@ -205,7 +205,7 @@ public class UserController {
 
 
     //忘记密码修改密码
-    @RequestMapping("/ForGetPwd")
+    @RequestMapping(value = "/ForGetPwd",method = RequestMethod.POST)
     public ModelAndView ForGetPwd(@RequestParam("code") String code,@RequestParam("phone") String phone,@RequestParam("user_pwd") String user_newpwd){
         ModelAndView mv=new ModelAndView();
         User user=new User();
@@ -218,7 +218,7 @@ public class UserController {
             mv.setViewName("PwdLogin");
             mv.addObject("msg","YES");
         }else {
-            mv.setViewName("ForGetpwd");
+            mv.setViewName("ForGetPwd");
             mv.addObject("msg", "NO");
         }
 
@@ -226,7 +226,7 @@ public class UserController {
     }
 
     //注册
-    @RequestMapping(value="/Register")
+    @RequestMapping(value="/Register",method = RequestMethod.POST)
     public ModelAndView Register(@RequestParam("user_name") String userName, @RequestParam("phone") String phone,
                                  @RequestParam("user_pwd") String user_pwd, @RequestParam("email") String email, @RequestParam("code")String code,
                                  @RequestParam("user_birth") Date user_birth, @RequestParam("user_real_name") String user_real_name,

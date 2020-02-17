@@ -15,6 +15,7 @@ import java.util.List;
 public class HomePageController {
     @Autowired
     private HomePageService HP;
+    //返回前十的热销
     @RequestMapping(value = "/hotsale",produces ={"application/json;charset=UTF-8"})
     @ResponseBody
     public String hotsale(){

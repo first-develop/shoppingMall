@@ -18,10 +18,10 @@ public class EvaluateServiceImpl implements EvaluateService {
     private EvaluateMapper em;
 
     @Override
-    public List<Evaluatevo> getalleva(int goodsId) {
-        List<Evaluatevo> evaluatevoList=new ArrayList<Evaluatevo>();
+    public List<Evaluatevo> getalleva(Integer gid) {
+        List<Evaluatevo> evaluatevoList= new ArrayList<>();
 
-        List<com.xzy.model.Evaluate> evaluateList=em.findPage(goodsId);
+        List<com.xzy.model.Evaluate> evaluateList=em.findPage(gid);
         if(!evaluateList.isEmpty()){
             for (Evaluate evaluate :evaluateList) {
                 Evaluatevo evaluatevo=new Evaluatevo();
@@ -39,17 +39,25 @@ public class EvaluateServiceImpl implements EvaluateService {
     }
 
     @Override
-    public long count(int gid) {
+    public boolean getorderID(Integer orderId) {
+        Integer bnum = em.getorderID(orderId);//看是否能返回订单号
+        if(bnum == null){
+            return false;
+        }else return true;
+    }
+
+    @Override
+    public Integer count(Integer gid) {
         return em.count(gid);
     }
 
     @Override
-    public int getOrderState(int oid) {
+    public Integer getOrderState(Integer oid) {
         return em.getOrderState(oid);
     }
 
     @Override
-    public int getGid(int oid) {
+    public Integer getGid(Integer oid) {
         return em.getGid(oid);
     }
 

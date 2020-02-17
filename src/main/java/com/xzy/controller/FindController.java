@@ -24,18 +24,18 @@ public class FindController {
     private FindService findService;
     //发现页面首页请求
     @RequestMapping(value = "/finduserCollect",produces = {"application/json;charset=UTF-8"})
-    public String finduserCollect(){
+    public String finduserCollect(int userId){
         //初始化
         ModelAndView mv=new ModelAndView();
         Findsvo findsvo=new Findsvo();
         findsvo.setFindsellergoods(new ArrayList<Findsellergoods>() );
 
         //查询用户收藏店铺
-        List<Seller> sellerArrayList=findService.finduserCollect(1);
+        List<Seller> sellerArrayList=findService.finduserCollect(userId);
         findsvo.setSellers(sellerArrayList);
 
         //查询商家推送
-        List<GoodsTable> goodsTable=findService.findcollectGoods(1);
+        List<GoodsTable> goodsTable=findService.findcollectGoods(userId);
 
         if (!goodsTable.isEmpty()){
             for (GoodsTable goods:goodsTable) {

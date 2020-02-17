@@ -12,7 +12,7 @@
 </head>
 <body>
     <div style="text-align: center">
-        <form  action="${pageContext.request.contextPath}/user/sendRegisterMsg" method="get">
+        <form  action="${pageContext.request.contextPath}/user/sendRegisterMsg" method="post">
             <p>用户名：<input type="text" name="user_name"/></p>
             <p>邮箱：<input type="email" name="email"></p>
             <p>注册电话：<input type="tel" name="phone"/></p>
@@ -20,7 +20,7 @@
             <p><input type="submit" value="发送注册码"/></p>
         </form>
 
-        <form  action="${pageContext.request.contextPath}/user/Register" method="get">
+        <form  action="${pageContext.request.contextPath}/user/Register" method="post">
             <p>用户名：<input type="text" name="user_name"/></p>
             <p>邮箱：<input type="email" name="email"></p>
             <p>密码：<input type="password" name="user_pwd"></p>
