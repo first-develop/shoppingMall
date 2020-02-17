@@ -36,8 +36,8 @@
 </div>
 
 <%--搜索--%>
-<form action="search" method="post">
-    搜索框：<input type="text" >
+<form action="goods/search" method="post">
+    搜索框：<input type="text" name="key">
     <input type="submit" value="搜索">
 </form>
 </body>

@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-         pageEncoding="utf-8"%>
+         pageEncoding="utf-8" isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,15 +15,17 @@
     <tr>
         <td>id</td>
         <td>name</td>
-        <td>编辑</td>
-        <td>删除</td>
+        <td>价格</td>
+        <td>描述</td>
+        <td>图片</td>
     </tr>
-    <c:forEach items="${cs}" var="c" varStatus="user1">
+    <c:forEach items="${goodslist}" var="c" varStatus="user1">
         <tr>
-            <td>${c.user_ID}</td>
-            <td>${c.user_name}</td>
-            <td><a href="editStudent?id=${c.user_ID}">编辑</a></td>
-            <td><a href="deleteStudent?id=${c.user_ID}">删除</a></td>
+            <td>${c.goods_id}</td>
+            <td>${c.goods_name}</td>
+            <td>${c.goods_price}</td>
+            <td>${c.goods_des}</td>
+            <td><img src="${c.goods_pic}"></td>
         </tr>
     </c:forEach>
 </table>
