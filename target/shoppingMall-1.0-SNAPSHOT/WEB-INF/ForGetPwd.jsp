@@ -12,7 +12,7 @@
 </head>
 <body>
     <div style="text-align: center">
-        <form  action="${pageContext.request.contextPath}/user/sendpwdMsg" method="get">
+        <form  action="${pageContext.request.contextPath}/user/sendpwdMsg" method="post">
             <p>注册电话：<input type="tel" name="phone"/></p>
             <p>验证码：<input type="text" name="code"/></p>
             <p>新密码<input type="password" name="user_pwd"></p>
@@ -20,7 +20,7 @@
         </form>
 
 
-        <form  action="${pageContext.request.contextPath}/user/ForGetPwd" method="get">
+        <form  action="${pageContext.request.contextPath}/user/ForGetPwd" method="post">
             <p>注册电话：<input type="tel" name="phone"/></p>
             <p>验证码：<input type="text" name="code"/></p>
             <p>新密码<input type="password" name="user_pwd"></p>
