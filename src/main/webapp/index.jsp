@@ -48,5 +48,9 @@
         搜索框：<input type="text" name="key">
         <input type="submit" value="搜索">
 </form>
+
+<br>
+
+<a href="lunbotu">轮播图</a>
 </body>
 </html>
