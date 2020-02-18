@@ -30,7 +30,8 @@
         </tr>
     </c:forEach>
 </table>
-
+<a href="searchkey">搜索记录</a>
+<a href="searchkeydel">清除搜索记录</a>
 
 <%--分页显示--%>
 <div style="text-align:center">

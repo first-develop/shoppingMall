@@ -8,9 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import redis.clients.jedis.Jedis;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 @RequestMapping("/goods")
@@ -29,7 +31,8 @@ public class GoodsController {
 
     @RequestMapping("/search2")
     public ModelAndView search2(@RequestParam(required = false) String key){
-
+        Jedis jedis=new Jedis();
+        jedis.sadd("search",key);
         List<goods_tableVO>  goods_tableVOList=searchService.search2(key);
         ModelAndView mav=new ModelAndView("searchgoods2");
         mav.addObject("goodslist",goods_tableVOList);
@@ -37,6 +40,22 @@ public class GoodsController {
 
     }
 
+    @RequestMapping("/searchkey")
+    public ModelAndView searchkey(){
+        Jedis jedis=new Jedis();
+        List searchkey=  jedis.srandmember("search",3);
+        ModelAndView mav=new ModelAndView("searchkey");
+        mav.addObject("searchkey",searchkey);
+        return  mav;
+    }
+
+    @RequestMapping("/searchkeydel")
+    public void searchkeydel(){
+        Jedis jedis=new Jedis();
+        jedis.del("search");
+
+
+    }
 
 
 }
