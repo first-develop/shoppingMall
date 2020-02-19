@@ -21,11 +21,11 @@
     </tr>
     <c:forEach items="${goodslist}" var="c" varStatus="user1">
         <tr>
-            <td>${c.goods_id}</td>
-            <td>${c.goods_name}</td>
-            <td>${c.goods_price}</td>
-            <td>${c.goods_des}</td>
-            <td><img src="${c.goods_pic}"></td>
+            <td>${c.goodsId}</td>
+            <td>${c.goodsName}</td>
+            <td>${c.goodsPrice}</td>
+            <td>${c.goodsDes}</td>
+            <td><img src="${c.goodsPic}"></td>
         </tr>
     </c:forEach>
 </table>

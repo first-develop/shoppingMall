@@ -17,8 +17,8 @@
     </tr>
     <c:forEach items="${lunbotulist}" var="c" varStatus="user1">
         <tr>
-            <td>${c.bigpic_id}</td>
-            <td>${c.goods_id}</td>
+            <td>${c.bigpicId}</td>
+            <td>${c.goodsId}</td>
             <td><img src="${c.bigpic}" ></td>
         </tr>
     </c:forEach>

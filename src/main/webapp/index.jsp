@@ -50,6 +50,7 @@
 </form>
 
 <br>
+<a href="goods/index">jsonTest</a>
 
 <a href="lunbotu">轮播图</a>
 </body>
